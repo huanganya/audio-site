@@ -1,0 +1,27 @@
+.scroll-to-top {
+	background: rgba(52, 58, 64, 0.5) none repeat scroll 0 0;
+	border-radius: 70px !important;
+	bottom: 86px;
+	color: #fff;
+	/*display: none;*/
+	height: 50px;
+	line-height: 46px;
+	position: fixed;
+	right: 15px;
+	text-align: center;
+	width: 50px;
+	z-index: 998;
+	border: 0;
+}
+.scroll-to-top:focus,
+.scroll-to-top:hover {
+	color: white;
+	outline: 0;
+	border: 0;
+}
+.scroll-to-top:hover {
+	background: #343a40;
+}
+.scroll-to-top i {
+	font-weight: 800;
+}

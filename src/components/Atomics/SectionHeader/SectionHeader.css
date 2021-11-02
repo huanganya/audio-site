@@ -1,0 +1,21 @@
+.no-after::after {
+	display: none !important;
+}
+
+.main-title > h6 {
+	margin: 0px 0 16px;
+}
+.top-category .main-title > h6 {
+	margin-bottom: 10px;
+}
+.right-action-link span {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 50px;
+	box-shadow: 0 0 6px #ececec;
+	display: inline-block;
+	height: 20px;
+	line-height: 19px;
+	margin: 0 0 0 3px;
+	text-align: center;
+	width: 20px;
+}

@@ -1,0 +1,64 @@
+.upload-video .text-primary {
+	color: #ff516b !important;
+}
+.imgplace {
+	background-color: #8781bd;
+	border-radius: 3px;
+	height: 94px;
+	width: 100%;
+}
+.osahan-title {
+	color: #000;
+	font-weight: 600;
+}
+.osahan-size {
+	font-size: 11px;
+}
+.osahan-progress .progress {
+	border-radius: 2px;
+	height: 8px;
+	margin: 14px 0;
+}
+.osahan-close {
+	position: absolute;
+	right: 18px;
+	top: 0;
+}
+.osahan-desc {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+@media (max-width: 575.98px) {
+	.imgplace {
+		margin-bottom: 15px;
+	}
+	.osahan-title {
+		padding: 0 25px 5px 0;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.imgplace {
+		margin-bottom: 15px;
+	}
+	.osahan-title {
+		padding: 0 25px 5px 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.imgplace {
+		margin-bottom: 15px;
+	}
+	.osahan-title {
+		padding: 0 25px 5px 0;
+	}
+}
+
+@media only screen and (max-width: 1320px) {
+	video {
+	  width: 240px !important;
+	  height: 135px !important;
+	}
+}

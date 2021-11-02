@@ -1,0 +1,14 @@
+.video-close {
+	color: #fff !important;
+	font-size: 18px;
+	position: absolute;
+	right: 6px;
+	z-index: 990;
+}
+.history-video .progress {
+	border-radius: 2px;
+	font-size: 9px;
+	font-weight: 700;
+	height: 13px;
+	margin: 12px 14px -4px 13px;
+}

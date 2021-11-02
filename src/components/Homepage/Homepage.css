@@ -1,0 +1,25 @@
+.top-mobile-search {
+	display: none;
+}
+.top-mobile-search {
+	margin: -16px -15px 19px -18px;
+}
+.top-mobile-search input {
+	border-radius: 0;
+	box-shadow: none !important;
+}
+.top-mobile-search .btn {
+	border-radius: 0;
+	font-size: inherit;
+}
+@media (max-width: 575.98px) {
+	.top-mobile-search {
+		display: block;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.top-mobile-search {
+		display: block;
+	}
+}

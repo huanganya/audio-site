@@ -1,0 +1,91 @@
+.media-body > .media {
+	margin-bottom: 0 !important;
+	margin-top: 2rem !important;
+}
+
+.media:last-child:not(.media-body > .media) {
+	margin-bottom: 0 !important;
+}
+
+.card {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 2px !important;
+	box-shadow: 0 0 11px #ececec !important;
+	border: none !important;
+}
+.sidebar-card-list li a {
+	border-bottom: 1px solid #efefef;
+	display: inline-block;
+	padding: 11px 0;
+	width: 100%;
+}
+.sidebar-card-list li:last-child a {
+	border: medium none;
+	padding-bottom: 0;
+}
+.tag-cloud-link {
+	background: #ccc none repeat scroll 0 0;
+	border-radius: 2px;
+	color: #fff !important;
+	display: inline-block;
+	margin: 2px 0;
+	padding: 4px 13px;
+}
+.tag-cloud-link:hover {
+	background: #000 none repeat scroll 0 0;
+	color: #fff;
+}
+.blog .card-title a {
+	color: #222 !important;
+}
+.blog .card-title {
+	margin: 0 0 7px;
+}
+.entry-meta {
+	margin-bottom: 13px;
+}
+.blog .card-body a {
+	color: #ff516b;
+}
+.entry-meta a {
+	color: #9c9c9c !important;
+}
+.entry-meta .fas,
+.entry-meta span {
+	background: #acacac none repeat scroll 0 0;
+	border-radius: 12px;
+	color: #fff;
+	display: inline-block;
+	font-size: 9px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	width: 19px;
+}
+
+.sidebar-card .input-group .btn {
+	font-size: 13px;
+}
+.sidebar-card .sidebar-card-list {
+	margin: 0;
+	padding: 0;
+}
+.sidebar-card .sidebar-card-list li {
+	list-style: outside none none;
+}
+.sidebar-card .sidebar-card-list li i,
+.sidebar-card .sidebar-card-list li svg {
+	font-size: 10px;
+	margin: 0 8px 0 0;
+}
+
+.gallery.mb-4 img {
+	width: 100%;
+}
+.reviews-card .rounded {
+	border-radius: 50px !important;
+	width: 54px;
+}
+.star-rating.float-right {
+	font-size: 13px;
+}
