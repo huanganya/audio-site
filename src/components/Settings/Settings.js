@@ -61,7 +61,6 @@ const Settings = () => {
 				globalVars.showToastr("More details save successfully.", "info");
 			}
 		}, error => {
-			console.log(error);
 			globalVars.showToastr("Server Error Occurred", "error");
 		});
 

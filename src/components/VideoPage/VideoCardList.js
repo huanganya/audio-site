@@ -52,14 +52,18 @@ const VideoCardList = ({
 					<div className="video-title">
 						<a href={videoHref}>{videoTitle}</a>
 					</div>
+
+					<div className="video-title">
+						<p>{views}</p>
+					</div>
+					
 					<div className={categoryClass}>
 						{videoCategory}{" "}
 						{verified ? <VerifiedTooltip /> : <UnverifiedTooltip />}
 					</div>
-					<div className="video-view">
-						{views} views &nbsp;
+					{/* <div className="video-view">
 						<FontAwesomeIcon icon={faCalendarAlt} /> {timeAgo} ago
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>

@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import { VerifiedTooltipLinkDark } from "../CustomCheckTooltips/CustomCheckTooltips";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTrash, faCog } from "@fortawesome/free-solid-svg-icons";
+
 function PlaylistCard({
 	id,
 	imgSrc,
@@ -21,8 +22,8 @@ function PlaylistCard({
 	handlePlus,
 	handleCog,
 }) {
-	let plusButton = "outline-danger";
-	let minusButton = "outline-secondary";
+	let plusButton = "outline-info";
+	let minusButton = "outline-danger";
 	let cogButton = "outline-secondary";
 
 	return (

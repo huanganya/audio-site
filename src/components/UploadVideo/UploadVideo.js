@@ -16,7 +16,6 @@ import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useCallback, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useDropzone } from 'react-dropzone';
-import { ToastContainer } from 'react-toastify';
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
@@ -52,18 +51,18 @@ const UploadVideo = () => {
 			}
 		}
 
-		axios.post(api, data, config).then(response => {
-			if(response.status == 200 && response.data == "Upload Success") {
+		axios.post(api, data, config).then(res => {
+			if(res.status == 200 && res.data == "Upload Success") {
 				globalVars.showToastr("The file was upload successfully.", "info");
 			}
 		}, error => {
-			if (error.response.status == 400) {
+			if (error.res.status == 400) {
 				globalVars.showToastr("Oops... The file has a problem. Please try again.", "error");
 			}
-			if (error.response.status == 401) {
+			if (error.res.status == 401) {
 				globalVars.showToastr("Oops... Please login now.", "error");
 			}
-			if(error.response.status == 403) {
+			if(error.res.status == 403) {
 				globalVars.showToastr("Invalid request", "error");
 			}
 		});
@@ -172,7 +171,9 @@ const UploadVideo = () => {
 						</Col>
 					</Row>
 					<hr />
-					<VideoUploadForm unique={uploadUrl}/>
+					{
+						file != null ? <VideoUploadForm unique={uploadUrl} size={globalVars.getFileSize(file)} mins={duration}/> : <div></div>
+					}
 				</Container>
 				<ThinFooter />
 			</ContentWrapper>

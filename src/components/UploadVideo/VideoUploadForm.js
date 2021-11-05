@@ -11,6 +11,8 @@ import { faImage, faVideo } from "@fortawesome/free-solid-svg-icons";
 import * as globalVars from "../shared/global";
 
 export default function VideoUploadForm(props) {
+
+	console.log(props.unique, props.size, props.mins);
 	const options = [
 		{name: 'Option A', id: 1},
 		{name: 'Option B', id: 2},
@@ -74,10 +76,11 @@ export default function VideoUploadForm(props) {
 		data.append('keywords', keywords);
 		data.append('playlist', playlist);
 		data.append('category', JSON.stringify(selectedCategories));
+		data.append('size', props.size);
+		data.append('mins', props.mins);
 
 		data.append('thumbnail', refThumbnail.current.files[0]);
 		data.append('canvas', refCanvas.current.files[0]);
-
 		const config = {
 			headers: {
 				'Content-Type': 'multipart/form-data',
