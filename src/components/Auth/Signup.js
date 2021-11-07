@@ -39,9 +39,14 @@ function Signup() {
 				globalVars.showToastr(response.data, "error");
 			} else {
 				globalVars.showToastr("Sign up successfully", "info");
-				localStorage.setItem("videoapp_token", response.data);
+				setTimeout(() => {
+					history.push("/auth/login");
+				}, 1000)
+				// localStorage.setItem("videoapp_token", response.data);
 			}
-		})
+		}, error => {
+			globalVars.showToastr("Server Error Occurred", "error");
+		});
 	}
 
 	const gotoHome = () => {

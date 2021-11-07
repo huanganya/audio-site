@@ -35,7 +35,9 @@ class GoogleLoginComponent extends Component {
       globalVars.showToastr("Login successfully", "info");
       localStorage.setItem("videoapp_token", res.data);
       this.props.handler();
-		})
+		}, error => {
+			globalVars.showToastr("Server Error Occurred", "error");
+    })
   };
 
   // Error Handler

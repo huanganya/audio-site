@@ -41,7 +41,9 @@ function Login() {
 				localStorage.setItem("videoapp_token", response.data);
 				gotoHome();
 			}
-		})
+		}, error => {
+			globalVars.showToastr("Server Error Occurred", "error");
+		});
 	}
 
 	const gotoHome = () => {

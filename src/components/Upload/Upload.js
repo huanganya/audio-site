@@ -56,7 +56,7 @@ const Upload = () => {
 							<h1 className="text-primary">
 								<div {...getRootProps()}>
 									<input {...getInputProps()}
-										accept="video/mp4,video/x-m4v,video/*"
+										accept="video/*, audio/*"
 									/>
 									{
 										isDroped ?

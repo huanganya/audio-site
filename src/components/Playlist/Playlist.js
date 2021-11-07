@@ -12,6 +12,7 @@ const Playlist = () => {
 				<Container fluid className="pb-0">
 					<ListItems />
 				</Container>
+				<div style={{marginTop: "35%"}}></div>
 				<ThinFooter />
 			</ContentWrapper>
 		</>

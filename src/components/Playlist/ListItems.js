@@ -12,7 +12,6 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import VideoCardList from "../VideoPage/VideoCardList";
 import MaterialTable from 'material-table';
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 const ListItems = () => {
 	const [embed, setEmbed] = useState(false);
@@ -45,7 +44,7 @@ const ListItems = () => {
 	const [selectedType, setSelectedType] = useState(0);
 	const [selectedId, setSelectedId] = useState(-1);
 	const [loadState, setLoadState] = useState(0);
-	const [plusModal, showPlusModal] = useState(true);
+	const [plusModal, showPlusModal] = useState(false);
 	const [minusModal, showMinusModal] = useState(false);
 	const [cogModal, showCogModal] = useState(false);
 	const [addModal, showAddModal] = useState(false);
@@ -54,6 +53,10 @@ const ListItems = () => {
 	const refUrl = useRef();
 	const refVisibility = useRef();
 	const lstVisible = ['Public', 'Private', 'Unlisted'];
+
+	const handleAdd = () => {
+		showPlusModal(true);
+	}
 
 	const handlePlus = (id) => {
 		setSelectedId(id);
@@ -357,10 +360,10 @@ const ListItems = () => {
 					</Modal.Header>
 					<Modal.Body>
 						<Form.Group className="mb-3" controlId="formBasic1Checkbox">
-							<Form.Switch label="Allow embedding" value={embed} onChange={setEmbed(!embed)}/>
+							{/* <Form.Switch label="Allow embedding" value={embed} onChange={setEmbed(!embed)}/> */}
 						</Form.Group>
 						<Form.Group className="mb-3" controlId="formBasic2Checkbox">
-							<Form.Switch label="Add new videos to top of playlist" value={order} onChange={setOrder(!order)}/>
+							{/* <Form.Switch label="Add new videos to top of playlist" value={order} onChange={setOrder(!order)}/> */}
 						</Form.Group>
 					</Modal.Body>
 					<Modal.Footer>
@@ -374,8 +377,14 @@ const ListItems = () => {
 				</Modal>
 				
 				<Row>
-					<Col md={12}>
-						<SectionHeader heading="Playlist" />
+					<Col md={6}>
+						<h6>Playlist</h6>
+					</Col>
+
+					<Col md={6}>
+					<button style={{float: "right"}} class="btn btn-primary" onClick={handleAdd}>
+							Create Playlist
+						</button>
 					</Col>
 					{
 						playlist.map((item, i)=>
